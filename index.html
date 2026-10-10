@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Hospital Appointment Booking System</h1>
+        <p>Your Health, Our Priority</p>
+    </header>
+
+    <section class="container">
+        <h2>Patient Registration / Login</h2>
+
+        <form id="registrationForm">
+
+            <div class="form-group">
+                <label for="fullName">Patient Name :</label>
+                <input type="text" id="fullName" placeholder="Enter patient name">
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number :</label>
+                <input type="text" id="phoneNumber" placeholder="Enter phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="userPassword">Password :</label>
+                <input type="password" id="userPassword" placeholder="Enter password">
+            </div>
+
+            <button type="submit">Register / Login</button>
+
+            <p id="registrationMessage"></p>
+        </form>
+    </section>
+
+    <section class="container">
+        <h2>Hospital Dashboard</h2>
+
+        <div class="doctor-container">
+
+            <div class="doctor-card">
+                <h3>Walter-White</h3>
+                <p><strong>Expertise :</strong> Cardiology</p>
+                <p><strong>Available Time Slots :</strong></p>
+                <span class="available-slot">12:30 PM, 4:00 PM</span>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Dexter</h3>
+                <p><strong>Expertise :</strong> Anaesthesia</p>
+                <p><strong>Available Time Slots :</strong></p>
+                <span class="available-slot">11:30 AM, 3:00 PM</span>
+            </div>
+
+            <div class="doctor-card">
+                <h3>Patrick-Jane</h3>
+                <p><strong>Expertise :</strong> Neurology</p>
+                <p><strong>Available Time Slots :</strong></p>
+                <span class="unavailable-slot">Not Available</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Book Appointment</h2>
+
+        <form id="bookingForm">
+
+            <div class="form-group">
+                <label for="bookingPatient">Patient Name :</label>
+                <input type="text" id="bookingPatient" placeholder="Enter patient name">
+            </div>
+
+            <div class="form-group">
+                <label for="selectedDoctor">Doctor :</label>
+                <select id="selectedDoctor">
+                    <option value="">Select doctor</option>
+                    <option value="Walter-White">Walter-White</option>
+                    <option value="Dexter">Dexter</option>
+                    <option value="Patrick-Jane" disabled>Patrick-Jane</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bookingDate">Appointment Date :</label>
+                <input type="date" id="bookingDate">
+            </div>
+
+            <div class="form-group">
+                <label for="bookingTime">Time Slot :</label>
+                <input type="time" id="bookingTime">
+            </div>
+
+            <div class="form-group">
+                <label for="bookingReason">Reason :</label>
+                <input type="text" id="bookingReason" placeholder="Enter a valid reason">
+            </div>
+
+            <button type="submit">Book Appointment</button>
+
+            <p id="bookingError"></p>
+        </form>
+    </section>
+
+    <section id="bookingConfirmation" class="container confirmation-panel">
+        <h2>Appointment Confirmed</h2>
+
+        <p><strong>Patient Name :</strong>
+            <span id="displayPatient"></span>
+        </p>
+
+        <p><strong>Doctor :</strong>
+            <span id="displayDoctor"></span>
+        </p>
+
+        <p><strong>Appointment Date :</strong>
+            <span id="displayDate"></span>
+        </p>
+
+        <p><strong>Time Slot :</strong>
+            <span id="displayTime"></span>
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

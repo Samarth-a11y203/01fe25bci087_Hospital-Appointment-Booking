@@ -1,0 +1,200 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f5f3fa;
+    color: #333344;
+    padding-bottom: 30px;
+}
+
+header
+{
+    background-color: #514477;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid #a99ad5;
+}
+
+header h1
+{
+    margin-bottom: 8px;
+}
+
+header p
+{
+    font-size: 15px;
+    color: #e5def7;
+}
+
+.container
+{
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2dced;
+    box-shadow: 0 3px 8px rgba(60, 45, 90, 0.08);
+}
+
+.container h2
+{
+    color: #514477;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8e1f2;
+}
+
+.form-group
+{
+    margin-bottom: 16px;
+}
+
+label
+{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #49415f;
+}
+
+input, select
+{
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cfc7df;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #fdfcff;
+}
+
+input:focus, select:focus
+{
+    outline: none;
+    border-color: #8069b2;
+}
+
+button
+{
+    background-color: #66538e;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover
+{
+    background-color: #493968;
+}
+
+.doctor-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.doctor-card
+{
+    border: 1px solid #ded6ed;
+    border-radius: 7px;
+    padding: 20px;
+    background-color: #faf8fe;
+    border-top: 3px solid #9380bd;
+}
+
+.doctor-card h3
+{
+    color: #514477;
+    margin-bottom: 12px;
+}
+
+.doctor-card p
+{
+    margin-bottom: 10px;
+}
+
+.available-slot
+{
+    color: #28734b;
+    background-color: #e8f5ec;
+    padding: 4px 7px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.unavailable-slot
+{
+    color: #b23b42;
+    background-color: #fbeaec;
+    padding: 4px 7px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+#registrationMessage
+{
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+#bookingError
+{
+    color: red;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.confirmation-panel
+{
+    display: none;
+    background-color: #f2faf4;
+    border-left: 5px solid #419765;
+}
+
+.confirmation-panel h2
+{
+    color: #28734b;
+}
+
+.confirmation-panel p
+{
+    margin: 12px 0;
+    padding: 8px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px)
+{
+    .doctor-container
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .container
+    {
+        width: 95%;
+        padding: 20px;
+    }
+
+    header h1
+    {
+        font-size: 24px;
+    }
+}
